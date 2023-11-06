@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:background="#D7DAEE">
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wave"
+        >
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/topLayout"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/baseline_arrow_back_24" />
+
+    <TextView
+        android:id="@+id/signUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backArrow"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="Sign Up"
+        android:textColor="#494CA2"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/FillInTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fill In!"
+        android:layout_below="@id/signUp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:paddingStart="15dp"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/FillInTxt"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/black"
+        android:drawableStart="@drawable/person_icon"
+        android:hint=" Name"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:layout_below="@id/name"
+        android:hint=" Email (ends with `.com`)"
+        android:textColor="@color/black"
+        android:padding="15dp"
+        android:textColorHint="@color/black"
+        android:drawableStart="@drawable/baseline_email_24"
+        />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_below="@id/email"
+        android:hint=" Password (alphanumeric)"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:drawableStart="@drawable/lock_icon"
+        />
+
+    <EditText
+        android:id="@+id/repassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_below="@id/password"
+        android:hint=" Confirm password"
+        android:textColor="@color/black"
+        android:padding="15dp"
+        android:textColorHint="@color/black"
+        android:drawableStart="@drawable/lock_icon"
+        />
+
+    <EditText
+        android:id="@+id/phoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:layout_below="@id/repassword"
+        android:hint=" Phone number"
+        android:textColor="@color/black"
+        android:padding="15dp"
+        android:textColorHint="@color/black"
+        android:drawableStart="@drawable/phone_icon"
+        />
+
+    <Button
+        android:id="@+id/registerBTN"
+        android:layout_width="480px"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phoneNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#8186D5"
+        android:text="Register"
+        android:textAllCaps="false"/>
+</RelativeLayout>

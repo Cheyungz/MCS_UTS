@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MatchDetail"
+    android:background="#D7DAEE"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/matchDetailBackArrow"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/baseline_arrow_back_24" />
+
+    <RelativeLayout
+        android:id="@+id/innerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/matchDetailBackArrow">
+
+        <LinearLayout
+            android:id="@+id/linearKiri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/namaTeamKiri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:text="nama team kiri"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/gambarTeamKiri"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/baseline_sports_soccer_24" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/linearKiri">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="VS"
+                android:textSize="25dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearKanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/vs">
+
+            <ImageView
+                android:id="@+id/gambarTeamKanan"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/baseline_sports_soccer_24" />
+
+            <TextView
+                android:id="@+id/namaTeamKanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:text="nama team kanan" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutDua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/innerLayout"
+        android:layout_marginTop="50dp"
+        >
+        <TextView
+            android:id="@+id/scheduledOn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Match will be scheduled on"
+            />
+
+        <TextView
+            android:id="@+id/matchDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="28-04-2023"
+            android:textSize="30dp"
+            android:shadowColor="#8186D5"
+            android:textStyle="bold"
+            android:shadowDx="12"
+            android:shadowDy="12"
+            android:shadowRadius="8"
+            android:gravity="center"
+            android:layout_below="@id/scheduledOn"
+            />
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/quantity"
+        android:layout_below="@+id/layoutDua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <Button
+            android:id="@+id/decrementBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:backgroundTint="#8186D5"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/ticketQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/incrementBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:backgroundTint="#8186D5"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/quantity"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/purchaseTicketBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Purchase Ticket"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="#65668C"
+            android:textAllCaps="false"
+            />
+    </LinearLayout>
+</RelativeLayout>

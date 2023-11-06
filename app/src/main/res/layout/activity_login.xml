@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="#D7DAEE">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wave"
+        android:id="@+id/topLayout">
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/appIcon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/topLayout"
+        android:layout_marginTop="10dp"
+        >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/SignInTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="Sign In"
+        android:textColor="#494CA2"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/WelcomeTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome!"
+        android:layout_below="@id/SignInTxt"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:paddingStart="15dp"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/emailLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/WelcomeTxt"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/baseline_email_24"
+        android:hint=" Email"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:inputType="textEmailAddress"
+        android:padding="15dp" />
+
+    <EditText
+        android:id="@+id/passwordLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_below="@id/emailLogin"
+        android:hint=" Password"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:padding="15dp"
+        android:drawableStart="@drawable/lock_icon"
+        />
+
+    <Button
+        android:id="@+id/signInBTN"
+        android:layout_width="1in"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#8186D5"
+        android:text="Sign In"
+        android:fontFamily="@font/poppins"
+        android:textAllCaps="false"/>
+
+    <TextView
+        android:id="@+id/account"
+        android:layout_below="@id/signInBTN"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="don't have an account?"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/goToRegisterBTN"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/account"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#65668C"
+        android:text="Register Here"
+        android:textAllCaps="false"/>
+
+
+</RelativeLayout>

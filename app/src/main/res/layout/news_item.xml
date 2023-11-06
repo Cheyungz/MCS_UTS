@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/newsCV"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#CDD1ED"
+    android:clickable="true"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#CDD1ED"
+        >
+
+        <ImageView
+            android:id="@+id/newsImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/baseline_sports_soccer_24"
+            />
+
+        <TextView
+            android:id="@+id/newsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="News Title"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/newsImage"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/newsDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/newsImage"
+            android:textColor="@color/black"
+            android:layout_below="@id/newsTitle"
+            android:layout_marginTop="5dp"
+            android:text="News Description"/>
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
